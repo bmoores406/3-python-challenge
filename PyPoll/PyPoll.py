@@ -74,8 +74,10 @@ with open(csvpath, "r") as csvfile:
     print(f"Winner: {str(winner)}")
     print(f"-------------------------------------" ) 
 
-#with open(output, "w") as poll_results:
-with open(file, 'r') as text:
-    print (text)
-    lines = text.read()
-    print(lines)
+results = os.path.join("Analysis", "PyBank.txt")
+
+
+with open(file, 'r') as textfile:
+    textfile.write(f"Financial Analysis\n")
+    textfile.write(f"--------------------\n")
+    textfile.write(f"Total Months: {str(total_months)}\n")

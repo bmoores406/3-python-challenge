@@ -61,11 +61,11 @@ with open(csvpath,'r') as csvfile:
         print(f"greatest_increase: {str(greatest_increase)}")
         print(f"greatest_decrease: {str(greatest_decrease)}")
 
-results = os.path.join("output", "PyBank.txt")
+results = os.path.join("Analysis", "PyBank.txt")
 
 with open(results, "w") as textfile:
 
-    csvwriter = csv.writer(textfile)
-
-
+    textfile.write(f"Financial Analysis\n")
+    textfile.write(f"--------------------\n")
+    textfile.write(f"Total Months: {str(total_months)}\n")
     
